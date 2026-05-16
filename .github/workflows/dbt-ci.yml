@@ -9,6 +9,9 @@ jobs:
   dbt-run:
     runs-on: ubuntu-latest
     environment: DBT_MI
+    default:
+      run:
+        working-directory: marketing_insights
 
     env:
       DBT_PRIVATE_KEY: ${{ secrets.DBT_PRIVATE_KEY }}
