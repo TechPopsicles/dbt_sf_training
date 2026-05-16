@@ -2,6 +2,7 @@
 target/
 dbt_packages/
 logs/
+.dbt/
 
 #Secrets
 rsa_key.p8
@@ -20,3 +21,4 @@ __pycache__/
 
 # VSCODE 
 .vscode/
+
