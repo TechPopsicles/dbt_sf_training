@@ -9,7 +9,7 @@ jobs:
   dbt-run:
     runs-on: ubuntu-latest
     environment: DBT_MI
-    default:
+    defaults:
       run:
         working-directory: marketing_insights
 
