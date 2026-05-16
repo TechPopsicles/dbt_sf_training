@@ -3,7 +3,7 @@ marketing_insights:
     ci:
       account: EBIUGTJ-FN06775
       database: MARKETING_INSIGHTS_CI
-      private_key_path: {{ env_var('DBT_PRIVATE_KEY_PATH') }}
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH') }}""
       role: ACCOUNTADMIN
       schema: ANALYTICS_CI
       threads: 1
