@@ -16,6 +16,10 @@ jobs:
     env:
       DBT_PRIVATE_KEY: ${{ secrets.DBT_PRIVATE_KEY }}
       DBT_PRIVATE_KEY_PATH: /home/runner/.dbt/rsa_key.p8
+      DBT_SNOWFLAKE_ACCOUNT: ${{ secrets.DBT_SNOWFLAKE_ACCOUNT }}
+      DBT_SNOWFLAKE_ROLE: ${{ secrets.DBT_SNOWFLAKE_ROLE }}
+      DBT_SNOWFLAKE_USER: ${{ secrets.DBT_SNOWFLAKE_USER }}
+      DBT_SCHEMA: pr_${{ github.event.pull_request.number }}_ANALYTICS
 
     steps:
       - name: Checkout repo
@@ -42,7 +46,7 @@ jobs:
         run: dbt deps
 
       - name: Run dbt debug
-        run: dbt debug --target ci
+        run: dbt debug --target ci      
 
       - name: Run dbt
         run: dbt build --target ci

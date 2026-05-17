@@ -52,6 +52,11 @@ models:
       +schema: MART
       +meta:
         layer: gold
+    reporting:
+      +tags: ['business intelligence', 'gold']
+      +schema: REPORTING
+      +meta:
+        layer: gold
     
     example:
       +materialized: view

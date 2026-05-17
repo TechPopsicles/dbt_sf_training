@@ -1,13 +1,13 @@
 marketing_insights:
   outputs:
     ci:
-      account: EBIUGTJ-FN06775
+      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
       database: MARKETING_INSIGHTS_CI
       private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH') }}"
-      role: ACCOUNTADMIN
-      schema: ANALYTICS_CI
+      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
+      schema: "{{ env_var('DBT_SCHEMA') }}"
       threads: 1
       type: snowflake
-      user: KIRANPOTHINA
+      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
       warehouse: COMPUTE_WH
   target: ci
