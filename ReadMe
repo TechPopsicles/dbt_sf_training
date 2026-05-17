@@ -29,3 +29,9 @@ using logs folder
 using target dir and look into compile and run folders
 
 kill -9 $(lsof -t -i:8080)
+
+dbt compile
+copy the target/manifest.json to state/
+dbt run -m <model_name> --defer --state state
+
+dbt clone --state state
