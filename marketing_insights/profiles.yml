@@ -1,0 +1,10 @@
+marketing_insights:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: 'ACCOUNTADMIN'
+      warehouse: 'COMPUTE_WH'
+      database: 'MARKETING_INSIGHTS'
+      schema: 'ANALYTICS'
+      threads: 8

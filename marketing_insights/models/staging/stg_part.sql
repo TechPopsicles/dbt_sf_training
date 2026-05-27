@@ -7,6 +7,6 @@ select
     P_SIZE,
     P_CONTAINER,
     P_RETAILPRICE,
-    P_COMMENT,
-    _LOADED_AT
+    P_COMMENT
+    -- ,_LOADED_AT
 from {{ source('SF_SAMPLE_DATA', 'part')}}
