@@ -14,6 +14,6 @@ select
     L_RECEIPTDATE,
     L_SHIPINSTRUCT,
     L_SHIPMODE,
-    L_COMMENT,
-    _LOADED_AT
+    L_COMMENT
+    -- ,_LOADED_AT
 from {{ source('SF_SAMPLE_DATA', 'lineitem')}}

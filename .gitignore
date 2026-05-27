@@ -22,3 +22,5 @@ __pycache__/
 # VSCODE 
 .vscode/
 
+./marketing_insights/profiles.yml
+

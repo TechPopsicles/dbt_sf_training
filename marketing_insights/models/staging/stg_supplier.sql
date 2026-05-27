@@ -5,6 +5,6 @@ select
     S_NATIONKEY,
     S_PHONE,
     S_ACCTBAL,
-    S_COMMENT,
-    _LOADED_AT
+    S_COMMENT
+    -- ,_LOADED_AT
 from {{ source('SF_SAMPLE_DATA', 'supplier')}}
